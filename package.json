@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "clone": "1.0.2",
-    "deep-extend": "0.4.1",
-    "message-box": "0.0.2",
+    "deep-extend": "0.5.1",
+    "message-box": "0.1.0",
     "mongo-object": "0.0.1",
     "underscore": "1.8.3"
   },
