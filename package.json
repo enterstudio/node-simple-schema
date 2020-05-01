@@ -22,16 +22,18 @@
     "build": "rm -rf dist/** && babel lib --out-dir dist --ignore *.tests.js,testHelpers/*",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix || true",
-    "prepublish": "npm test && npm run build",
+    "prepublish": "npm run snyk-protect && npm test && npm run build",
     "test": "mocha --compilers js:babel-core/register --recursive \"lib/**/*.tests.js\"",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "clone": "1.0.2",
     "deep-extend": "0.4.1",
     "message-box": "0.0.2",
     "mongo-object": "0.0.1",
-    "underscore": "1.8.3"
+    "underscore": "1.8.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -47,5 +49,6 @@
     "eslint-plugin-react": "^5.2.2",
     "expect": "^1.20.1",
     "mocha": "^2.5.3"
-  }
+  },
+  "snyk": true
 }
